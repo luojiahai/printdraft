@@ -1,5 +1,5 @@
 <template>
-  <div class="resume-modern" :style="cssVars">
+  <div :class="['resume-modern', { 'lang-cn': data.lang === 'cn' }]" :style="cssVars">
     <!-- Header -->
     <div class="header-name">{{ data.name }}</div>
     <div class="header-contact">

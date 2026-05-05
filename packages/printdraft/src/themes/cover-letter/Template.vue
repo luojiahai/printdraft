@@ -1,5 +1,5 @@
 <template>
-  <div class="cover-letter" :style="cssVars">
+  <div :class="['cover-letter', { 'lang-cn': data.lang === 'cn' }]" :style="cssVars">
     <!-- Sender -->
     <div class="sender">
       <div class="sender-name">{{ data.sender.name }}</div>

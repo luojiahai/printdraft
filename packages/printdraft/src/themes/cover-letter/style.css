@@ -69,3 +69,7 @@
   }
   .closing-block { break-inside: avoid; }
 }
+
+.cover-letter.lang-cn {
+  --printdraft-fontFamily: 'Noto Serif CJK SC', 'Source Han Serif SC', 'STSong', 'SimSun', serif;
+}
