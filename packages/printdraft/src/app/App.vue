@@ -37,6 +37,7 @@ import StylePanel from './components/StylePanel.vue'
 import { parseDocument } from '../renderer/parser.js'
 import type { ParsedDocument } from '../renderer/parser.js'
 import jsYaml from 'js-yaml'
+import { themes } from '../themes/index.js'
 
 const docContent = ref('')
 const parseError = ref<string | null>(null)
@@ -89,6 +90,12 @@ function onThemeChange(newKey: string) {
     if (!match) return
     const raw = jsYaml.load(match[1]) as Record<string, unknown>
     raw.theme = newKey
+    const newTheme = themes[newKey]
+    if (newTheme) {
+      raw.style = Object.fromEntries(
+        newTheme.styleVariables.map((v) => [v.key, v.default])
+      )
+    }
     const newYaml = '---\n' + jsYaml.dump(raw) + '---'
     onEditorChange(newYaml)
   } catch { /* ignore */ }
