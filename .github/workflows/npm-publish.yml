@@ -30,10 +30,22 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Publish printdraft
-        working-directory: packages/printdraft
+      - name: Publish @draft/types
+        working-directory: packages/types
         run: pnpm publish --access public --no-git-checks
 
-      - name: Publish create-printdraft
-        working-directory: packages/create-printdraft
+      - name: Publish @draft/parser
+        working-directory: packages/parser
+        run: pnpm publish --access public --no-git-checks
+
+      - name: Publish @draft/themes
+        working-directory: packages/themes
+        run: pnpm publish --access public --no-git-checks
+
+      - name: Publish @draft/cli
+        working-directory: packages/cli
+        run: pnpm publish --access public --no-git-checks
+
+      - name: Publish create-draft
+        working-directory: packages/create-draft
         run: pnpm publish --access public --no-git-checks

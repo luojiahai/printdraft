@@ -1,0 +1,76 @@
+{
+  "name": "@draft/cli",
+  "version": "0.1.3",
+  "description": "CLI for creating professional PDF resumes and cover letters",
+  "repository": {
+    "url": "https://github.com/luojiahai/printdraft"
+  },
+  "type": "module",
+  "bin": {
+    "draft": "./bin/draft.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "bin",
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build:app": "vite build",
+    "build:lib": "tsc -p tsconfig.node.json",
+    "build": "pnpm build:app && pnpm build:lib",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "draft",
+    "resume",
+    "cover-letter",
+    "pdf",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@draft/parser": "workspace:*",
+    "@draft/themes": "workspace:*",
+    "@draft/types": "workspace:*",
+    "@inquirer/prompts": "catalog:prod",
+    "chalk": "catalog:prod",
+    "chokidar": "catalog:prod",
+    "commander": "catalog:prod",
+    "express": "catalog:prod",
+    "get-port": "catalog:prod",
+    "js-yaml": "catalog:prod",
+    "open": "catalog:prod",
+    "puppeteer": "catalog:prod",
+    "vue": "catalog:prod",
+    "ws": "catalog:prod",
+    "zod": "catalog:prod"
+  },
+  "devDependencies": {
+    "@codemirror/commands": "catalog:frontend",
+    "@codemirror/lang-yaml": "catalog:frontend",
+    "@codemirror/state": "catalog:frontend",
+    "@codemirror/theme-one-dark": "catalog:frontend",
+    "@codemirror/view": "catalog:frontend",
+    "@types/express": "catalog:types",
+    "@types/js-yaml": "catalog:types",
+    "@types/node": "catalog:types",
+    "@types/ws": "catalog:types",
+    "@vitejs/plugin-vue": "catalog:frontend",
+    "codemirror": "catalog:frontend",
+    "typescript": "catalog:dev",
+    "vite": "catalog:dev"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.33.2"
+}
