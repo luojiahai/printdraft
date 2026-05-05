@@ -1,5 +1,5 @@
-import type { Theme } from '@draftjs/types'
-import { resumeSchema } from '@draftjs/types'
+import type { Theme } from '@printdraft/types'
+import { resumeSchema } from '@printdraft/types'
 import Template from './Template.vue'
 
 const resumeModern: Theme = {

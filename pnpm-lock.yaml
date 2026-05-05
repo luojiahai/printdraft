@@ -106,13 +106,13 @@ importers:
 
   packages/cli:
     dependencies:
-      '@draftjs/parser':
+      '@printdraft/parser':
         specifier: workspace:*
         version: link:../parser
-      '@draftjs/themes':
+      '@printdraft/themes':
         specifier: workspace:*
         version: link:../themes
-      '@draftjs/types':
+      '@printdraft/types':
         specifier: workspace:*
         version: link:../types
       '@inquirer/prompts':
@@ -196,7 +196,7 @@ importers:
 
   packages/parser:
     dependencies:
-      '@draftjs/types':
+      '@printdraft/types':
         specifier: workspace:*
         version: link:../types
       js-yaml:
@@ -221,7 +221,7 @@ importers:
 
   packages/themes:
     dependencies:
-      '@draftjs/types':
+      '@printdraft/types':
         specifier: workspace:*
         version: link:../types
       vue:

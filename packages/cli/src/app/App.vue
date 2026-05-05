@@ -34,10 +34,10 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import Editor from './components/Editor.vue'
 import Preview from './components/Preview.vue'
 import StylePanel from './components/StylePanel.vue'
-import { parseDocument } from '@draftjs/parser'
-import type { ParsedDocument } from '@draftjs/parser'
+import { parseDocument } from '@printdraft/parser'
+import type { ParsedDocument } from '@printdraft/parser'
 import jsYaml from 'js-yaml'
-import { themes } from '@draftjs/themes'
+import { themes } from '@printdraft/themes'
 
 const docContent = ref('')
 const parseError = ref<string | null>(null)

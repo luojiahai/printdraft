@@ -1,5 +1,5 @@
 import jsYaml from 'js-yaml'
-import { schemaRegistry, type ThemeMeta } from '@draftjs/types'
+import { schemaRegistry, type ThemeMeta } from '@printdraft/types'
 
 export interface ParsedDocument {
   theme: ThemeMeta

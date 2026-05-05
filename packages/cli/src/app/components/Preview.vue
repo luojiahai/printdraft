@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { computed, defineAsyncComponent, shallowRef, watch } from 'vue'
-import type { ParsedDocument } from '@draftjs/parser'
+import type { ParsedDocument } from '@printdraft/parser'
 
 const props = defineProps<{
   parsedDoc: ParsedDocument | null
@@ -30,7 +30,7 @@ watch(
   (key) => {
     if (!key || !knownThemes.includes(key)) { themeComponent.value = null; return }
     themeComponent.value = defineAsyncComponent(
-      () => import(`@draftjs/themes/${key}/Template.vue`)
+      () => import(`@printdraft/themes/${key}/Template.vue`)
     )
   },
   { immediate: true }

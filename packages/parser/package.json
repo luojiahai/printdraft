@@ -1,6 +1,6 @@
 {
-  "name": "@draftjs/parser",
-  "version": "0.1.1",
+  "name": "@printdraft/parser",
+  "version": "0.1.2",
   "description": "Document parser for draft",
   "repository": {
     "url": "https://github.com/luojiahai/printdraft"
@@ -30,7 +30,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@draftjs/types": "workspace:*",
+    "@printdraft/types": "workspace:*",
     "js-yaml": "catalog:prod"
   },
   "devDependencies": {

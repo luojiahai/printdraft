@@ -1,5 +1,5 @@
-import type { Theme } from '@draftjs/types'
-import { coverLetterSchema } from '@draftjs/types'
+import type { Theme } from '@printdraft/types'
+import { coverLetterSchema } from '@printdraft/types'
 import Template from './Template.vue'
 
 const coverLetter: Theme = {

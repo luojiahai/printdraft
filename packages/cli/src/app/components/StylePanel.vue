@@ -69,8 +69,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { themes } from '@draftjs/themes'
-import type { Theme } from '@draftjs/types'
+import { themes } from '@printdraft/themes'
+import type { Theme } from '@printdraft/types'
 
 const props = defineProps<{
   activeThemeKey: string
