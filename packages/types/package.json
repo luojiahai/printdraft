@@ -1,0 +1,46 @@
+{
+  "name": "@draft/types",
+  "version": "0.1.3",
+  "description": "Type definitions and schemas for draft",
+  "repository": {
+    "url": "https://github.com/luojiahai/printdraft"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown src/index.ts && tsc -p tsconfig.build.json",
+    "dev": "tsdown src/index.ts --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "draft",
+    "resume",
+    "types"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "zod": "catalog:prod"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vue": "catalog:prod"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.33.2"
+}

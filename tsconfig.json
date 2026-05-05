@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@draft/types": ["./packages/types/src/index.ts"],
+      "@draft/parser": ["./packages/parser/src/index.ts"],
+      "@draft/themes": ["./packages/themes/index.ts"],
+      "@draft/themes/*": ["./packages/themes/*"]
+    }
+  },
+  "include": [
+    "packages/types/src",
+    "packages/parser/src",
+    "packages/themes",
+    "packages/cli/src"
+  ]
+}
