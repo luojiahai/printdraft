@@ -1,0 +1,69 @@
+.cover-letter {
+  --printdraft-fontFamily: Georgia, 'Times New Roman', serif;
+  --printdraft-fontSize: 11pt;
+  --printdraft-primaryColor: #000000;
+
+  font-family: var(--printdraft-fontFamily);
+  font-size: var(--printdraft-fontSize);
+  color: var(--printdraft-primaryColor);
+  padding: 1in;
+  line-height: 1.6;
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  box-sizing: border-box;
+}
+
+.cover-letter .sender {
+  margin-bottom: 20pt;
+}
+
+.cover-letter .sender-name {
+  font-weight: bold;
+  margin-bottom: 2pt;
+}
+
+.cover-letter .sender-detail {
+  font-size: 0.95em;
+}
+
+.cover-letter .date {
+  margin: 16pt 0;
+}
+
+.cover-letter .recipient {
+  margin-bottom: 16pt;
+}
+
+.cover-letter .recipient-name {
+  font-weight: bold;
+}
+
+.cover-letter .subject {
+  font-weight: bold;
+  margin-bottom: 16pt;
+}
+
+.cover-letter .body-paragraph {
+  margin-bottom: 12pt;
+  text-indent: 0;
+}
+
+.cover-letter .closing-block {
+  margin-top: 20pt;
+}
+
+.cover-letter .closing-text {
+  margin-bottom: 36pt;
+}
+
+.cover-letter .signature {
+  font-weight: bold;
+}
+
+@media print {
+  .cover-letter {
+    width: 100%;
+    min-height: auto;
+  }
+}

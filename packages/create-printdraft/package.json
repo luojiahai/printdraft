@@ -1,0 +1,10 @@
+{
+  "name": "create-printdraft",
+  "version": "0.1.0",
+  "description": "Create a new printdraft document",
+  "bin": {
+    "create-printdraft": "./index.js"
+  },
+  "keywords": ["printdraft", "resume", "cover-letter", "pdf"],
+  "license": "MIT"
+}

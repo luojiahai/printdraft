@@ -1,0 +1,128 @@
+/* resume-classic: mirrors luojiahai/resume-template resume.cls */
+/* Base: 10pt Times New Roman, letter, 0.4in margins, 0.6pt rules */
+
+.resume-classic {
+  --printdraft-fontFamily: 'Times New Roman', Times, serif;
+  --printdraft-fontSize: 10pt;
+  --printdraft-primaryColor: #000000;
+
+  font-family: var(--printdraft-fontFamily);
+  font-size: var(--printdraft-fontSize);
+  color: var(--printdraft-primaryColor);
+  padding: 0.4in;
+  line-height: 1.15;
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  box-sizing: border-box;
+}
+
+.resume-classic .header-name {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 0 0 3pt;
+  letter-spacing: 0.02em;
+}
+
+.resume-classic .header-contact {
+  text-align: center;
+  font-size: 0.95em;
+  margin-bottom: 4pt;
+}
+
+.resume-classic .section {
+  margin-top: 6pt;
+}
+
+.resume-classic .section-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  border-bottom: 0.6pt solid var(--printdraft-primaryColor);
+  margin: 0 0 2pt;
+  padding-bottom: 1pt;
+}
+
+.resume-classic .entry {
+  margin-bottom: 3pt;
+}
+
+/* heading1+subheading1 and heading1+subheading2 */
+.resume-classic .heading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+}
+
+.resume-classic .subheading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-style: italic;
+}
+
+.resume-classic .subheading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-style: italic;
+}
+
+/* heading2: award with optional description bullet */
+.resume-classic .heading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+}
+
+/* heading3: award, no bullets */
+.resume-classic .heading3-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+}
+
+/* skills */
+.resume-classic .heading4-row {
+  display: flex;
+  gap: 4pt;
+  flex-wrap: wrap;
+}
+
+.resume-classic .heading4-category {
+  font-weight: bold;
+}
+
+/* bullets: tiny bullet, 12pt left indent, compact spacing */
+.resume-classic .bullets {
+  margin: 0;
+  padding-left: 12pt;
+  list-style: none;
+}
+
+.resume-classic .bullets li {
+  margin-bottom: -2pt;
+  line-height: 1.2;
+  display: flex;
+  align-items: baseline;
+  gap: 4pt;
+}
+
+.resume-classic .bullets li::before {
+  content: '•';
+  font-size: 0.55em;
+  flex-shrink: 0;
+  line-height: 1.8;
+}
+
+@media print {
+  .resume-classic {
+    width: 100%;
+    min-height: auto;
+    padding: 0.4in;
+  }
+}

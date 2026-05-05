@@ -1,0 +1,128 @@
+.resume-modern {
+  --printdraft-fontFamily: 'Inter', system-ui, sans-serif;
+  --printdraft-fontSize: 10pt;
+  --printdraft-accentColor: #2563eb;
+
+  font-family: var(--printdraft-fontFamily);
+  font-size: var(--printdraft-fontSize);
+  color: #1a1a1a;
+  padding: 0.45in;
+  line-height: 1.4;
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  box-sizing: border-box;
+}
+
+.resume-modern .header-name {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111;
+  margin: 0 0 4pt;
+}
+
+.resume-modern .header-contact {
+  font-size: 0.88em;
+  color: #555;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8pt;
+  margin-bottom: 10pt;
+}
+
+.resume-modern .section {
+  margin-top: 10pt;
+}
+
+.resume-modern .section-title {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--printdraft-accentColor);
+  border-left: 3pt solid var(--printdraft-accentColor);
+  padding-left: 6pt;
+  margin: 0 0 5pt;
+}
+
+.resume-modern .entry {
+  margin-bottom: 6pt;
+}
+
+.resume-modern .heading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.resume-modern .subheading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.resume-modern .subheading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.resume-modern .heading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.resume-modern .heading3-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.resume-modern .heading4-row {
+  display: flex;
+  gap: 4pt;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.resume-modern .heading4-category {
+  font-weight: 600;
+  color: #333;
+}
+
+.resume-modern .bullets {
+  margin: 2pt 0 0;
+  padding-left: 14pt;
+  list-style: none;
+}
+
+.resume-modern .bullets li {
+  margin-bottom: 1pt;
+  line-height: 1.35;
+  display: flex;
+  align-items: baseline;
+  gap: 4pt;
+}
+
+.resume-modern .bullets li::before {
+  content: '–';
+  color: var(--printdraft-accentColor);
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+@media print {
+  .resume-modern {
+    width: 100%;
+    min-height: auto;
+  }
+}

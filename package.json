@@ -1,0 +1,15 @@
+{
+  "name": "printdraft-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -F printdraft dev",
+    "build": "pnpm -F printdraft build"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "puppeteer",
+      "@puppeteer/browsers"
+    ]
+  }
+}
