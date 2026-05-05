@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { parseDocument } from './index.js'
-import { resumeSchema, coverLetterSchema, schemaRegistry } from '@draft/types'
+import { resumeSchema, coverLetterSchema, schemaRegistry } from '@draftjs/types'
 
 function makeResumeYaml(fields: Record<string, string> = {}): string {
   const theme = fields.theme ?? 'resume-classic'

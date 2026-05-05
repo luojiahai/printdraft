@@ -2,5 +2,5 @@
 try {
   require('child_process').execSync('draft init', { stdio: 'inherit' });
 } catch {
-  require('child_process').execSync('npx @draft/cli@latest init', { stdio: 'inherit' });
+  require('child_process').execSync('npx @draftjs/cli@latest init', { stdio: 'inherit' });
 }

@@ -30,19 +30,19 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Publish @draft/types
+      - name: Publish @draftjs/types
         working-directory: packages/types
         run: pnpm publish --access public --no-git-checks
 
-      - name: Publish @draft/parser
+      - name: Publish @draftjs/parser
         working-directory: packages/parser
         run: pnpm publish --access public --no-git-checks
 
-      - name: Publish @draft/themes
+      - name: Publish @draftjs/themes
         working-directory: packages/themes
         run: pnpm publish --access public --no-git-checks
 
-      - name: Publish @draft/cli
+      - name: Publish @draftjs/cli
         working-directory: packages/cli
         run: pnpm publish --access public --no-git-checks
 

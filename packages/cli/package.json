@@ -1,6 +1,6 @@
 {
-  "name": "@draft/cli",
-  "version": "0.1.3",
+  "name": "@draftjs/cli",
+  "version": "0.1.1",
   "description": "CLI for creating professional PDF resumes and cover letters",
   "repository": {
     "url": "https://github.com/luojiahai/printdraft"
@@ -38,9 +38,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@draft/parser": "workspace:*",
-    "@draft/themes": "workspace:*",
-    "@draft/types": "workspace:*",
+    "@draftjs/parser": "workspace:*",
+    "@draftjs/themes": "workspace:*",
+    "@draftjs/types": "workspace:*",
     "@inquirer/prompts": "catalog:prod",
     "chalk": "catalog:prod",
     "chokidar": "catalog:prod",

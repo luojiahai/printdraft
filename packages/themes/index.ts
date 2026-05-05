@@ -1,4 +1,4 @@
-import type { Theme } from '@draft/types'
+import type { Theme } from '@draftjs/types'
 import resumeClassic from './resume-classic/index.js'
 import resumeModern from './resume-modern/index.js'
 import resumeCompact from './resume-compact/index.js'

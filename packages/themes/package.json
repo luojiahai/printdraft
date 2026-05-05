@@ -1,6 +1,6 @@
 {
-  "name": "@draft/themes",
-  "version": "0.1.3",
+  "name": "@draftjs/themes",
+  "version": "0.1.1",
   "description": "Document themes for draft",
   "repository": {
     "url": "https://github.com/luojiahai/printdraft"
@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@draft/types": "workspace:*",
+    "@draftjs/types": "workspace:*",
     "vue": "catalog:prod"
   },
   "publishConfig": {

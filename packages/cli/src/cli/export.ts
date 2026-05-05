@@ -3,7 +3,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import puppeteer from 'puppeteer'
 import chalk from 'chalk'
-import { parseDocument } from '@draft/parser'
+import { parseDocument } from '@draftjs/parser'
 import { startServer } from '../server/index.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
