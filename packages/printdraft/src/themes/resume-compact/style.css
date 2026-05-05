@@ -105,5 +105,10 @@
   .resume-compact {
     width: 100%;
     min-height: auto;
+    padding: 0.4in;
   }
+  .entry { break-inside: avoid; }
+  .section-title { break-after: avoid; }
+  .heading1-row,
+  .subheading1-row { break-inside: avoid; }
 }

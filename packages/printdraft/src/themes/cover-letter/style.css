@@ -65,5 +65,7 @@
   .cover-letter {
     width: 100%;
     min-height: auto;
+    padding: 1in;
   }
+  .closing-block { break-inside: avoid; }
 }
