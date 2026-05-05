@@ -1,6 +1,7 @@
 import { Command } from 'commander'
 import { init } from './init.js'
 import { dev } from './dev.js'
+import { build } from './build.js'
 import { exportPdf } from './export.js'
 
 const program = new Command()
@@ -19,6 +20,11 @@ program
   .command('dev')
   .description('Start the web editor')
   .action(dev)
+
+program
+  .command('build')
+  .description('Build a deployable static site in dist/')
+  .action(build)
 
 program
   .command('export')
