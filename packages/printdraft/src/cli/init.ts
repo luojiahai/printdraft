@@ -52,10 +52,10 @@ export async function init() {
 
   // Fill in placeholders
   template = template
-    .replace('[NAME]', name)
-    .replace('[EMAIL]', email)
-    .replace('[PHONE]', phone)
-    .replace('[LINKEDIN]', linkedin || 'username')
+    .replace(/\[NAME\]/g, name)
+    .replace(/\[EMAIL\]/g, email)
+    .replace(/\[PHONE\]/g, phone)
+    .replace(/\[LINKEDIN\]/g, linkedin || 'username')
     .replace(/^theme: .+$/m, `theme: ${theme}`)
     .replace(/^lang: .+$/m, `lang: ${lang}`)
 
