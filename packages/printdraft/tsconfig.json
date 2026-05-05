@@ -11,5 +11,5 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["src/app/**/*", "src/themes/**/*", "src/renderer/**/*"]
+  "include": ["src/app/**/*", "src/themes/**/*", "src/renderer/**/*", "src/shims-vue.d.ts"]
 }
