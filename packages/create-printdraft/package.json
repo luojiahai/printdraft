@@ -6,5 +6,6 @@
     "create-printdraft": "./index.js"
   },
   "keywords": ["printdraft", "resume", "cover-letter", "pdf"],
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.2"
 }

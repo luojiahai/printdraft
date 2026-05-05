@@ -11,5 +11,6 @@
       "puppeteer",
       "@puppeteer/browsers"
     ]
-  }
+  },
+  "packageManager": "pnpm@10.33.2"
 }
