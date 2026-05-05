@@ -31,6 +31,7 @@ export async function dev() {
     // Dev mode: start Express API server + Vite dev server
     const apiServer = await startServer(docPath, distApp)
     console.log(chalk.bold(`\n  printdraft dev (development mode)\n`))
+    console.log(chalk.yellow(`  Tip: run \`printdraft build\` to build the app for production mode.\n`))
     console.log(`  ${chalk.green('➜')}  API server on port ${apiServer.port}`)
 
     // Spawn Vite dev server from the package root

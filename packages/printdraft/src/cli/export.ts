@@ -28,7 +28,7 @@ export async function exportPdf(opts: { output: string }) {
   const distApp = path.join(__dirname, '..', '..', 'dist', 'app')
 
   if (!fs.existsSync(path.join(distApp, 'index.html'))) {
-    console.error(chalk.red('  App not built. Run `pnpm build` in the printdraft package first.'))
+    console.error(chalk.red('  App not built. Run `printdraft build` first.'))
     process.exit(1)
   }
 
