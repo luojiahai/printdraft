@@ -1,12 +1,25 @@
 {
   "name": "create-draft",
   "version": "0.1.2",
-  "description": "Create a new draft document",
+  "description": "Create a new printdraft document project",
+  "type": "module",
   "repository": {
     "url": "https://github.com/luojiahai/printdraft"
   },
   "bin": {
-    "create-draft": "./index.js"
+    "create-draft": "./index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "template"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "node build.mjs"
+  },
+  "dependencies": {
+    "ansis": "^3.3.0",
+    "prompts": "^2.4.2"
   },
   "keywords": ["draft", "resume", "cover-letter", "pdf"],
   "license": "MIT",
