@@ -17,12 +17,20 @@ export async function exportPdf(opts: { output: string }) {
   }
 
   // Validate document before launching browser
+  let parsedDoc
   try {
     const content = fs.readFileSync(docPath, 'utf-8')
-    parseDocument(content)
+    parsedDoc = parseDocument(content)
   } catch (err) {
     console.error(chalk.red(`  Parse error: ${err}`))
     process.exit(1)
+  }
+
+  if ((parsedDoc.data as { lang?: string }).lang === 'cn') {
+    console.warn(chalk.yellow(
+      '  Warning: lang: cn detected. Headless Chrome may not have CJK fonts installed.\n' +
+      '  On Linux, install them with: sudo apt-get install fonts-noto-cjk\n'
+    ))
   }
 
   const distApp = path.join(__dirname, '..', '..', 'dist', 'app')
