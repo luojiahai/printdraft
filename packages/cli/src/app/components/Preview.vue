@@ -13,25 +13,32 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineAsyncComponent, shallowRef, watch } from 'vue'
+import { shallowRef, watch } from 'vue'
+import type { Component } from 'vue'
 import type { ParsedDocument } from '@printdraft/parser'
+import ResumeClassic from '@printdraft/themes/resume-classic/Template.vue'
+import ResumeModern from '@printdraft/themes/resume-modern/Template.vue'
+import ResumeCompact from '@printdraft/themes/resume-compact/Template.vue'
+import CoverLetter from '@printdraft/themes/cover-letter/Template.vue'
 
 const props = defineProps<{
   parsedDoc: ParsedDocument | null
   error: string | null
 }>()
 
-const themeComponent = shallowRef<object | null>(null)
+const themeComponent = shallowRef<Component | null>(null)
 
-const knownThemes = ['resume-classic', 'resume-modern', 'resume-compact', 'cover-letter']
+const themeMap: Record<string, Component> = {
+  'resume-classic': ResumeClassic,
+  'resume-modern': ResumeModern,
+  'resume-compact': ResumeCompact,
+  'cover-letter': CoverLetter,
+}
 
 watch(
   () => props.parsedDoc?.theme.key,
   (key) => {
-    if (!key || !knownThemes.includes(key)) { themeComponent.value = null; return }
-    themeComponent.value = defineAsyncComponent(
-      () => import(`@printdraft/themes/${key}/Template.vue`)
-    )
+    themeComponent.value = (key && themeMap[key]) ? themeMap[key] : null
   },
   { immediate: true }
 )

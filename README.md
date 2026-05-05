@@ -5,24 +5,24 @@ CLI and library for creating professional PDF resumes and cover letters.
 ## Quick Start
 
 ```bash
-npm init printdraft
-printdraft dev
-printdraft export
+pnpm create draft
+draft dev
+draft export
 ```
 
 ## Installation
 
 ```bash
-npm install -g printdraft
+pnpm add -g @printdraft/cli
 ```
 
 ## Commands
 
-### `printdraft init`
+### `draft init`
 
 Scaffold a new document interactively. Choose document type, theme, language, and fill in your details.
 
-### `printdraft dev`
+### `draft dev`
 
 Start the web editor at `http://localhost:3000`.
 
@@ -30,13 +30,13 @@ Start the web editor at `http://localhost:3000`.
 - **Right panel**: Live preview with your chosen theme
 - **Style panel** (✦ button): Switch themes and adjust style variables
 
-### `printdraft export`
+### `draft export`
 
 Export `document.md` to `document.pdf` via Puppeteer.
 
 ```bash
-printdraft export
-printdraft export --output my-resume.pdf
+draft export
+draft export --output my-resume.pdf
 ```
 
 ## Document Format
