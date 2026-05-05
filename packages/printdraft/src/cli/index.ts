@@ -2,6 +2,7 @@ import { Command } from 'commander'
 import { init } from './init.js'
 import { dev } from './dev.js'
 import { exportPdf } from './export.js'
+import { build } from './build.js'
 
 const program = new Command()
 
@@ -25,5 +26,10 @@ program
   .description('Export document.md to PDF')
   .option('-o, --output <path>', 'Output PDF path', './document.pdf')
   .action(exportPdf)
+
+program
+  .command('build')
+  .description('Build the web editor app')
+  .action(build)
 
 program.parse()
