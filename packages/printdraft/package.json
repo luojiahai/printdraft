@@ -1,6 +1,6 @@
 {
   "name": "printdraft",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CLI and library for creating professional PDF resumes and cover letters",
   "repository": {
     "url": "https://github.com/luojiahai/printdraft"
