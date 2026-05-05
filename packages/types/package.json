@@ -1,6 +1,6 @@
 {
   "name": "@printdraft/types",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Type definitions and schemas for draft",
   "repository": {
     "url": "https://github.com/luojiahai/printdraft"

@@ -1,6 +1,6 @@
 {
   "name": "@printdraft/parser",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Document parser for draft",
   "repository": {
     "url": "https://github.com/luojiahai/printdraft"

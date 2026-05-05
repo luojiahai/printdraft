@@ -5,11 +5,11 @@ style:
   fontFamily: Times New Roman
   fontSize: 10pt
   primaryColor: '#000000'
-name: ''
+name: '[NAME]'
 contact:
-  phone: ''
-  email: ''
-  linkedin: 'username'
+  phone: '[PHONE]'
+  email: '[EMAIL]'
+  linkedin: '[LINKEDIN]'
 sections:
   - title: Education
     entries:
