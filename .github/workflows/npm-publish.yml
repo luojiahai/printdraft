@@ -11,22 +11,29 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: install pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v4
 
-      - name: install node.js
+      - name: Install node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: pnpm
           registry-url: https://registry.npmjs.org/
 
-      - name: install dependencies
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: publish package
+      - name: Build
+        run: pnpm build
+
+      - name: Publish printdraft
         working-directory: packages/printdraft
+        run: pnpm -r publish --access public --no-git-checks
+
+      - name: Publish create-printdraft
+        working-directory: packages/create-printdraft
         run: pnpm -r publish --access public --no-git-checks
