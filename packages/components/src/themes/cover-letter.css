@@ -1,0 +1,75 @@
+.cover-letter {
+  --pd-fontFamily: Georgia, 'Times New Roman', serif;
+  --pd-fontSize: 11pt;
+  --pd-primaryColor: #000000;
+
+  font-family: var(--pd-fontFamily);
+  font-size: var(--pd-fontSize);
+  color: var(--pd-primaryColor);
+  padding: 1in;
+  line-height: 1.6;
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  box-sizing: border-box;
+}
+
+.cover-letter .pd-sender {
+  margin-bottom: 20pt;
+}
+
+.cover-letter .pd-sender-name {
+  font-weight: bold;
+  margin-bottom: 2pt;
+}
+
+.cover-letter .pd-sender-detail {
+  font-size: 0.95em;
+}
+
+.cover-letter .pd-date {
+  margin-top: 16pt;
+}
+
+.cover-letter .pd-recipient {
+  margin-bottom: 16pt;
+}
+
+.cover-letter .pd-recipient-name {
+  font-weight: bold;
+}
+
+.cover-letter .pd-subject {
+  font-weight: bold;
+  margin-bottom: 16pt;
+}
+
+.cover-letter .pd-body p {
+  margin-bottom: 12pt;
+  margin-top: 0;
+}
+
+.cover-letter .pd-closing {
+  margin-top: 20pt;
+}
+
+.cover-letter .pd-closing p {
+  margin: 0;
+}
+
+.cover-letter .pd-closing p:first-child {
+  margin-bottom: 36pt;
+}
+
+.cover-letter .pd-closing p:last-child {
+  font-weight: bold;
+}
+
+@media print {
+  .cover-letter {
+    width: 100%;
+    min-height: auto;
+    padding: 1in;
+  }
+  .cover-letter .pd-closing { break-inside: avoid; }
+}

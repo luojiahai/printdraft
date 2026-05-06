@@ -76,17 +76,17 @@ async function main() {
 
   // Copy template files (skip document starters — handled separately below)
   for (const file of fs.readdirSync(templateDir)) {
-    if (file === 'resume.md' || file === 'cover-letter.md') continue
+    if (file === 'resume.vue' || file === 'cover-letter.vue') continue
     fs.copyFileSync(
       path.join(templateDir, file),
       path.join(targetPath, renameFiles[file] ?? file),
     )
   }
 
-  // Copy chosen document template as document.md
+  // Copy chosen document template as document.vue
   fs.copyFileSync(
-    path.join(templateDir, `${docType}.md`),
-    path.join(targetPath, 'document.md'),
+    path.join(templateDir, `${docType}.vue`),
+    path.join(targetPath, 'document.vue'),
   )
 
   // Patch package.json name

@@ -1,7 +1,6 @@
 import { Command } from 'commander'
 import { init } from './init.js'
 import { dev } from './dev.js'
-import { build } from './build.js'
 import { exportPdf } from './export.js'
 
 const program = new Command()
@@ -18,17 +17,12 @@ program
 
 program
   .command('dev')
-  .description('Start the web editor')
+  .description('Start the live-preview server')
   .action(dev)
 
 program
-  .command('build')
-  .description('Build a deployable static site in dist/')
-  .action(build)
-
-program
   .command('export')
-  .description('Export document.md to PDF')
+  .description('Export document.vue to PDF')
   .option('-o, --output <path>', 'Output PDF path', './document.pdf')
   .action(exportPdf)
 

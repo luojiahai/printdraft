@@ -1,0 +1,126 @@
+.resume-modern {
+  --pd-fontFamily: 'Inter', system-ui, sans-serif;
+  --pd-fontSize: 10pt;
+  --pd-accentColor: #2563eb;
+
+  font-family: var(--pd-fontFamily);
+  font-size: var(--pd-fontSize);
+  color: #1a1a1a;
+  padding: 0.45in;
+  line-height: 1.4;
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  box-sizing: border-box;
+}
+
+.resume-modern .pd-name {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111;
+  margin: 0 0 4pt;
+}
+
+.resume-modern .pd-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8pt;
+  font-size: 0.88em;
+  color: #555;
+  margin-bottom: 10pt;
+}
+
+.resume-modern .pd-section {
+  margin-top: 10pt;
+}
+
+.resume-modern .pd-section-title {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pd-accentColor);
+  border-left: 3pt solid var(--pd-accentColor);
+  padding-left: 6pt;
+  margin: 0 0 5pt;
+}
+
+.resume-modern .pd-entry {
+  margin-bottom: 6pt;
+}
+
+.resume-modern .pd-heading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.resume-modern .pd-subheading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.resume-modern .pd-subheading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.resume-modern .pd-heading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.resume-modern .pd-skills-row {
+  display: flex;
+  gap: 4pt;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.resume-modern .pd-skills-category {
+  font-weight: 600;
+  color: #333;
+}
+
+.resume-modern .pd-bullets {
+  margin: 2pt 0 0;
+  padding-left: 14pt;
+  list-style: none;
+}
+
+.resume-modern .pd-bullets li {
+  margin-bottom: 1pt;
+  line-height: 1.35;
+  display: flex;
+  align-items: baseline;
+  gap: 4pt;
+}
+
+.resume-modern .pd-bullets li::before {
+  content: '–';
+  color: var(--pd-accentColor);
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+@media print {
+  .resume-modern {
+    width: 100%;
+    min-height: auto;
+    padding: 0.45in;
+  }
+  .resume-modern .pd-entry { break-inside: avoid; }
+  .resume-modern .pd-section-title { break-after: avoid; }
+  .resume-modern .pd-heading1-row,
+  .resume-modern .pd-subheading1-row { break-inside: avoid; }
+}

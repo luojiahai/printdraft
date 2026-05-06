@@ -8,16 +8,11 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "paths": {
-      "@printdraft/types": ["./packages/types/src/index.ts"],
-      "@printdraft/parser": ["./packages/parser/src/index.ts"],
-      "@printdraft/themes": ["./packages/themes/index.ts"],
-      "@printdraft/themes/*": ["./packages/themes/*"]
+      "@printdraft/components": ["./packages/components/src/index.ts"]
     }
   },
   "include": [
-    "packages/types/src",
-    "packages/parser/src",
-    "packages/themes",
+    "packages/components/src",
     "packages/cli/src"
   ]
 }
