@@ -1,0 +1,128 @@
+/* resume-classic: mirrors luojiahai/resume-template resume.cls */
+/* Base: 10pt Times New Roman, letter, 0.4in margins, 0.6pt rules */
+
+.resume-classic {
+  --pd-fontFamily: 'Times New Roman', Times, serif;
+  --pd-fontSize: 10pt;
+  --pd-primaryColor: #000000;
+
+  font-family: var(--pd-fontFamily);
+  font-size: var(--pd-fontSize);
+  color: var(--pd-primaryColor);
+  padding: 0.4in;
+  line-height: 1.15;
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  box-sizing: border-box;
+}
+
+.resume-classic .pd-name {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 0 0 3pt;
+  letter-spacing: 0.02em;
+}
+
+.resume-classic .pd-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 0.95em;
+  margin-bottom: 4pt;
+}
+
+.resume-classic .pd-contact > * + *::before {
+  content: ' · ';
+  white-space: pre;
+}
+
+.resume-classic .pd-section {
+  margin-top: 6pt;
+}
+
+.resume-classic .pd-section-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  border-bottom: 0.6pt solid var(--pd-primaryColor);
+  margin: 0 0 2pt;
+  padding-bottom: 1pt;
+}
+
+.resume-classic .pd-entry {
+  margin-bottom: 3pt;
+}
+
+.resume-classic .pd-heading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+}
+
+.resume-classic .pd-subheading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-style: italic;
+}
+
+.resume-classic .pd-subheading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-style: italic;
+}
+
+.resume-classic .pd-heading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+}
+
+.resume-classic .pd-skills-row {
+  display: flex;
+  gap: 4pt;
+  flex-wrap: wrap;
+}
+
+.resume-classic .pd-skills-category {
+  font-weight: bold;
+}
+
+.resume-classic .pd-bullets {
+  margin: 0;
+  padding-left: 12pt;
+  list-style: none;
+}
+
+.resume-classic .pd-bullets li {
+  margin-bottom: -2pt;
+  line-height: 1.2;
+  display: flex;
+  align-items: baseline;
+  gap: 4pt;
+}
+
+.resume-classic .pd-bullets li::before {
+  content: '•';
+  font-size: 0.55em;
+  flex-shrink: 0;
+  line-height: 1.8;
+}
+
+@media print {
+  .resume-classic {
+    width: 100%;
+    min-height: auto;
+    padding: 0.4in;
+  }
+  .resume-classic .pd-entry { break-inside: avoid; }
+  .resume-classic .pd-section-title { break-after: avoid; }
+  .resume-classic .pd-heading1-row,
+  .resume-classic .pd-subheading1-row { break-inside: avoid; }
+}

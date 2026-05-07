@@ -1,0 +1,115 @@
+.resume-compact {
+  --pd-fontFamily: Arial, Helvetica, sans-serif;
+  --pd-fontSize: 10pt;
+  --pd-lineHeight: 1.2;
+
+  font-family: var(--pd-fontFamily);
+  font-size: var(--pd-fontSize);
+  color: #000;
+  padding: 0.4in;
+  line-height: var(--pd-lineHeight);
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  box-sizing: border-box;
+}
+
+.resume-compact .pd-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0 0 2pt;
+}
+
+.resume-compact .pd-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4pt;
+  font-size: 0.88em;
+  color: #333;
+  margin-bottom: 3pt;
+}
+
+.resume-compact .pd-contact > * + *::before {
+  content: ' | ';
+  white-space: pre;
+}
+
+.resume-compact .pd-section {
+  margin-top: 5pt;
+}
+
+.resume-compact .pd-section-title {
+  font-weight: bold;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  background: #f0f0f0;
+  padding: 1pt 3pt;
+  margin: 0 0 2pt;
+}
+
+.resume-compact .pd-entry {
+  margin-bottom: 2pt;
+}
+
+.resume-compact .pd-heading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.resume-compact .pd-subheading1-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.9em;
+}
+
+.resume-compact .pd-subheading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.9em;
+}
+
+.resume-compact .pd-heading2-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.resume-compact .pd-skills-row {
+  display: flex;
+  gap: 4pt;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+}
+
+.resume-compact .pd-skills-category {
+  font-weight: bold;
+}
+
+.resume-compact .pd-bullets {
+  margin: 0;
+  padding-left: 10pt;
+  list-style: disc;
+}
+
+.resume-compact .pd-bullets li {
+  margin-bottom: -1pt;
+}
+
+@media print {
+  .resume-compact {
+    width: 100%;
+    min-height: auto;
+    padding: 0.4in;
+  }
+  .resume-compact .pd-entry { break-inside: avoid; }
+  .resume-compact .pd-section-title { break-after: avoid; }
+  .resume-compact .pd-heading1-row,
+  .resume-compact .pd-subheading1-row { break-inside: avoid; }
+}

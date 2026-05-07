@@ -9,13 +9,13 @@ const dest = path.join(__dirname, 'template')
 fs.mkdirSync(dest, { recursive: true })
 
 fs.copyFileSync(
-  path.join(cliTemplates, 'resume-empty.md'),
-  path.join(dest, 'resume.md'),
+  path.join(cliTemplates, 'resume-empty.vue'),
+  path.join(dest, 'resume.vue'),
 )
 
 fs.copyFileSync(
-  path.join(cliTemplates, 'cover-letter-empty.md'),
-  path.join(dest, 'cover-letter.md'),
+  path.join(cliTemplates, 'cover-letter-empty.vue'),
+  path.join(dest, 'cover-letter.vue'),
 )
 
 console.log('✓ Template files copied to create-draft/template/')

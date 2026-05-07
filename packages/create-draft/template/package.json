@@ -2,7 +2,6 @@
   "name": "my-document",
   "private": true,
   "scripts": {
-    "build": "draft build",
     "dev": "draft dev",
     "export": "draft export"
   },
