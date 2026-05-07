@@ -68,6 +68,12 @@ importers:
         specifier: catalog:dev
         version: 9.11.1
 
+  demo:
+    dependencies:
+      '@printdraft/cli':
+        specifier: workspace:*
+        version: link:../packages/cli
+
   packages/cli:
     dependencies:
       '@inquirer/prompts':

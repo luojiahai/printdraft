@@ -7,6 +7,6 @@
     "export": "draft export"
   },
   "dependencies": {
-    "@printdraft/cli": "latest"
+    "@printdraft/cli": "workspace:*"
   }
 }
