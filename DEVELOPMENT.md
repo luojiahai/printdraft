@@ -17,12 +17,6 @@ Build all packages at once:
 pnpm build
 ```
 
-Build with watch mode:
-
-```bash
-pnpm dev
-```
-
 ### Run Demo
 
 To run the demo document locally:
@@ -37,12 +31,13 @@ The server will restart automatically every time the builds get updated.
 
 ```
 packages/
-  cli/          - CLI, Express backend, and Vite frontend app
-  parser/       - YAML frontmatter document parser
-  themes/       - Vue theme components
+  cli/          - CLI and Vite-based dev server / export pipeline
+  components/   - Semantic Vue components for authoring documents
+  themes/       - Vue theme templates
   types/        - Type definitions and Zod schemas
   create-draft/ - Script for `pnpm create draft`
-demo/           - Demo document for local development
+  parser/       - Deprecated (documents are now Vue SFCs)
+demo/           - Demo document (document.vue) for local development
 ```
 
 ## Tests
