@@ -40,7 +40,7 @@ export async function startViteServer(docPath: string, port = 3001): Promise<Vit
     server: {
       port,
       strictPort: false,
-      fs: { allow: [docDir, cliRoot] },
+      fs: { allow: [docDir, cliRoot, componentsDir] },
     },
     logLevel: 'warn',
   })

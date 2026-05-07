@@ -15,7 +15,8 @@ export async function dev() {
   const server = await startViteServer(docPath, 3001)
   await server.listen()
 
-  const port = server.config.server.port ?? 3001
+  const address = server.httpServer?.address()
+  const port = typeof address === 'object' && address ? address.port : 3001
   const url = `http://localhost:${port}`
 
   console.log(chalk.bold(`\n  draft dev\n`))
